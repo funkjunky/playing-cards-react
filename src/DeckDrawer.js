@@ -18,17 +18,21 @@ export default class DeckDrawer extends React.Component {
 
     this.state = {
       cardsRemaining: this.deck.length(),
-      drawnCards: [],
+      dealtCards: [],
     }
   }
 
-  draw = () => {
-    const drawnCards = produce(this.state.drawnCards, draftDrawnCards => {
-      draftDrawnCards.push(this.deck.draw());
+  dealOneCard = () => {
+    const dealtCard = this.deck.dealOneCard();
+    if (!dealtCard) return;
+
+    // create a new array of drawn cards with the new card pushed.
+    const dealtCards = produce(this.state.dealtCards, draftDrawnCards => {
+      draftDrawnCards.push(dealtCard);
     });
 
     this.setState({
-      drawnCards,
+      dealtCards,
       cardsRemaining: this.deck.length()
     });
   };
@@ -38,11 +42,11 @@ export default class DeckDrawer extends React.Component {
       <p>Cards left: { this.state.cardsRemaining }</p>
       <div>
         <button onClick={ () => this.deck.shuffle() }>Shuffle</button>
-        <button onClick={ this.draw }>Draw</button>
+        <button onClick={ this.dealOneCard }>Draw</button>
       </div>
-      <img src="./cardback.png" alt="card back" onClick={ this.draw } />
+      <img src="./cardback.png" alt="card back" onClick={ this.dealOneCard } />
       <div>
-        { this.state.drawnCards.map(card =>
+        { this.state.dealtCards.map(card =>
           <img
             src="./cardfronts.sheet.png"
             alt={ `${card.rank} of ${card.suit}` }

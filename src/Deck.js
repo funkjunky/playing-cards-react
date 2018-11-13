@@ -20,7 +20,7 @@ export default class Deck {
     }
   }
 
-  draw = () => {
+  dealOneCard = () => {
     return this.cards.shift();
   }
 
