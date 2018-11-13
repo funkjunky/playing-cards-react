@@ -6,19 +6,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+        <header className='App-header'>
+          <h1>Card Dealer</h1>
+          <h2>This app shuffles and draws cards from a deck.</h2>
+          <p>The cards start ordered.</p>
+          <p>Hit the 'shuffle' button to randomize the cards.</p>
+          <p>Click either the 'draw' button, or the top of the deck to draw a card</p>
         </header>
       </div>
     );
