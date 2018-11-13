@@ -1,5 +1,6 @@
 import React from 'react';
 
+import DeckDrawer from './DeckDrawer';
 import './App.css';
 
 class App extends React.Component {
@@ -13,6 +14,7 @@ class App extends React.Component {
           <p>Hit the 'shuffle' button to randomize the cards.</p>
           <p>Click either the 'draw' button, or the top of the deck to draw a card</p>
         </header>
+        <DeckDrawer />
       </div>
     );
   }

@@ -14,21 +14,19 @@ export default class Deck {
     this.cards = [...pregeneratedCardArray];
   }
 
-  shuffle(times = 1) {
+  shuffle = (times = 1) => {
     for(let i=0; i<times; ++i) {
       this.cards.sort((a, b) => Math.random() < 0.5 ? 1 : -1);
     }
   }
 
-  draw() {
+  draw = () => {
     return this.cards.shift();
   }
 
-  length() {
+  length = () => {
     return this.cards.length
   }
 }
 
 export const getNewDeck = () => new Deck();
-
-

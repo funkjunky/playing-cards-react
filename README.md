@@ -11,3 +11,6 @@
 
 The card images were taken from wikimedia and created by the user Dmitry Fomin 2017
 https://commons.wikimedia.org/wiki/File:English_pattern_playing_cards_deck.svg
+
+The card back was taken from wikimedia and created by the user Germarquezm
+https://commons.wikimedia.org/wiki/File:Reverso_baraja_espa%C3%B1ola.svg
