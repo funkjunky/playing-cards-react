@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/playing-cards-react/precache-manifest.4611e4514d66b7a899c10a6538faca06.js"
+  "/playing-cards-react/precache-manifest.8a2d94bae8418e1675b1b88dd4e3a701.js"
 );
 
 workbox.clientsClaim();

@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "dea2e38df09712eac93e",
+    "revision": "13090dcf04a95776d982",
     "url": "/playing-cards-react/static/css/main.542f9324.chunk.css"
   },
   {
-    "revision": "dea2e38df09712eac93e",
-    "url": "/playing-cards-react/static/js/main.dea2e38d.chunk.js"
+    "revision": "13090dcf04a95776d982",
+    "url": "/playing-cards-react/static/js/main.13090dcf.chunk.js"
   },
   {
     "revision": "dc4b472abba7e188ed91",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/playing-cards-react/static/js/runtime~main.4a773ff3.js"
   },
   {
-    "revision": "b90662a3d55c297aa1ac8eadf1794f4c",
+    "revision": "1e45c8fb3ab5425751dc7d413fdb6858",
     "url": "/playing-cards-react/index.html"
   }
 ];
