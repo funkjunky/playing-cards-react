@@ -22,14 +22,24 @@ describe('Deck', () => {
     expect(deck.length()).toBe(52);
   });
 
-  describe('draw', () => {
+  describe('dealOneCard', () => {
     it('should return the top card of the deck', () => {
       // This assumes the starting cards are the same as pregeneratedCardArray
       const deck = getNewDeck();
-      const drawnCard = deck.draw();
+      const dealtCard = deck.dealOneCard();
       const firstCard = pregeneratedCardArray[0]
-      expect(drawnCard).toEqual(firstCard);
+      expect(dealtCard).toEqual(firstCard);
       expect(deck.length()).toBe(pregeneratedCardArray.length - 1);
+    });
+
+    it('should not return a new card when the deck is out of cards', () => {
+      const deck = getNewDeck();
+
+      // we're using the root array to iterate through all cards, for convinience.
+      pregeneratedCardArray.forEach(_ => deck.dealOneCard());
+
+      const dealtCard = deck.dealOneCard();
+      expect(dealtCard).toBeUndefined();
     });
   });
 
@@ -41,13 +51,13 @@ describe('Deck', () => {
       Object.defineProperty(Math, 'random', { value: () => 1, writable: true });
     });
 
-    it('should cause draw to return a new card', () => {
+    it('should cause dealOneCard to return a unique card', () => {
       const deck = getNewDeck();
 
       deck.shuffle();
-      const drawnCard = deck.draw();
+      const dealtCard = deck.dealOneCard();
       const firstCard = pregeneratedCardArray[0]
-      expect(drawnCard).not.toEqual(firstCard)
+      expect(dealtCard).not.toEqual(firstCard)
     });
 
     afterAll(() => {
