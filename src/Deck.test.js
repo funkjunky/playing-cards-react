@@ -29,6 +29,7 @@ describe('Deck', () => {
       const drawnCard = deck.draw();
       const firstCard = pregeneratedCardArray[0]
       expect(drawnCard).toEqual(firstCard);
+      expect(deck.length()).toBe(pregeneratedCardArray.length - 1);
     });
   });
 
